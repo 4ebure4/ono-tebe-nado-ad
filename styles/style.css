@@ -1,12 +1,11 @@
-/* Переиспользуемый оверлей */
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #000;
+  opacity: 0.6;
   z-index: 1;
 }
 
-/* Базовый адрес */
 .address {
   display: flex;
   flex-direction: column;
@@ -24,7 +23,6 @@
   margin: 0;
 }
 
-/* --- Шапка --- */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -45,7 +43,8 @@
   padding-left: 18px;
 }
 
-.header__links-list-item_no-bullit {
+.header__links-list-item_no-bullit,
+.header__links-list-item_no-bullet {
   list-style-type: none;
 }
 
@@ -70,7 +69,6 @@
   max-width: 240px;
 }
 
-/* --- Обложка --- */
 .cover {
   position: relative;
   display: flex;
@@ -119,7 +117,8 @@
   letter-spacing: 0;
 }
 
-.cover__description {
+.cover__description,
+.description {
   position: relative;
   z-index: 2;
   display: flex;
@@ -128,7 +127,8 @@
   gap: 20px;
 }
 
-.cover__description-text {
+.cover__description-text,
+.description__text {
   margin: 0;
   color: #fff;
   font-size: 22px;
@@ -138,7 +138,8 @@
   word-spacing: 18px;
 }
 
-.bet-button {
+.bet-button,
+.button {
   padding: 12px 32px;
   border: 1px solid #fff;
   background-color: transparent;
@@ -152,7 +153,6 @@
   cursor: pointer;
 }
 
-/* --- Лоты --- */
 .lots {
   padding: 180px 24px 0;
 }
@@ -176,7 +176,7 @@
 }
 
 .lots__card-list-item {
-  width: calc((100% - 25px * 2) / 3);
+  width: calc((100% - 50px) / 3);
   min-height: 450px;
 }
 
@@ -223,7 +223,6 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
-  text-decoration: underline;
   text-transform: uppercase;
 }
 
@@ -243,12 +242,16 @@
   text-decoration: underline;
 }
 
-/* --- Об аукционе --- */
 .about {
   display: grid;
-  grid-template-columns: calc((100% - 25px * 2) / 3) 1fr;
+  grid-template-columns: calc((100% - 50px) / 3) 1fr;
   gap: 25px;
   padding: 180px 24px 0;
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
 }
 
 .about__column_type_logo {
@@ -293,7 +296,6 @@
   line-height: 1.2;
 }
 
-/* --- Подвал --- */
 .footer {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
